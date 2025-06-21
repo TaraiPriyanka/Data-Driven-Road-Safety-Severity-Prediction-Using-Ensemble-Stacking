@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Predict Accident Severity</h2>
+<form method="POST">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label>Junction Control</label>
+            <input type="text" class="form-control" name="Junction_Control" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Junction Detail</label>
+            <input type="text" class="form-control" name="Junction_Detail" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Light Conditions</label>
+            <input type="text" class="form-control" name="Light_Conditions" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Local Authority (District)</label>
+            <input type="text" class="form-control" name="Local_Authority_(District)" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Carriageway Hazards</label>
+            <input type="text" class="form-control" name="Carriageway_Hazards" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Latitude</label>
+            <input type="number" step="any" class="form-control" name="Latitude" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Longitude</label>
+            <input type="number" step="any" class="form-control" name="Longitude" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Number of Casualties</label>
+            <input type="number" class="form-control" name="Number_of_Casualties" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Number of Vehicles</label>
+            <input type="number" class="form-control" name="Number_of_Vehicles" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Police Force</label>
+            <input type="text" class="form-control" name="Police_Force" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Road Surface Conditions</label>
+            <input type="text" class="form-control" name="Road_Surface_Conditions" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Road Type</label>
+            <input type="text" class="form-control" name="Road_Type" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Speed Limit</label>
+            <input type="number" class="form-control" name="Speed_limit" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Urban or Rural Area</label>
+            <input type="text" class="form-control" name="Urban_or_Rural_Area" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Weather Conditions</label>
+            <input type="text" class="form-control" name="Weather_Conditions" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Vehicle Type</label>
+            <input type="text" class="form-control" name="Vehicle_Type" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label>Time (HH:MM)</label>
+            <input type="text" class="form-control" name="Time" required>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Predict</button>
+</form>
+{% endblock %}

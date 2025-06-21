@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center mb-4">
+    <h2 class="text-dark fw-bold">Accident Severity Prediction System</h2>
+    <p class="lead text-muted">A Machine Learning-Based Web Application</p>
+</div>
+
+<!-- Project Introduction -->
+<div class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title text-dark">About the Project</h4>
+        <p class="card-text">
+            Road traffic accidents are a major cause of injury and death worldwide. This system predicts the severity of a road accident based on real-time inputs like weather, road type, time, and traffic conditions using machine learning. The prediction helps in:
+        </p>
+        <ul>
+            <li>Early emergency response dispatching</li>
+            <li>Prioritizing high-risk areas</li>
+            <li>Making data-driven decisions for traffic safety</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Implementation Details -->
+<div class="accordion mb-4" id="implementationAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                Implementation Details
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#implementationAccordion">
+            <div class="accordion-body">
+                <ul>
+                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+                    <li><strong>Backend:</strong> Flask (Python)</li>
+                    <li><strong>Machine Learning:</strong> Voting Classifier combining Logistic Regression, Decision Tree, and Random Forest</li>
+                    <li><strong>Data Preprocessing:</strong> Encoding, Feature Scaling, Null Handling</li>
+                    <li><strong>Prediction Output:</strong> Classified as <code>Fatal</code>, <code>Serious</code>, or <code>Slight</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Class Labels Table -->
+<div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+        <h5 class="mb-0">Prediction Classes</h5>
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-striped mb-0">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Severity Class</th>
+                    <th scope="col">Meaning</th>
+                    <th scope="col">Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Fatal</strong></td>
+                    <td>Accident leads to death</td>
+                    <td>High-priority emergency required</td>
+                </tr>
+                <tr>
+                    <td><strong>Serious</strong></td>
+                    <td>Severe injury but non-fatal</td>
+                    <td>Ambulance & hospital involvement</td>
+                </tr>
+                <tr>
+                    <td><strong>Slight</strong></td>
+                    <td>Minor injuries or vehicle damage</td>
+                    <td>General road assistance</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="row g-4 mb-5">
+    <div class="col-md-4">
+        <div class="card text-white bg-dark h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Smart Emergency Response</h5>
+                <p class="card-text">Quickly assess accident severity and dispatch appropriate help.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-dark h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Traffic Safety Planning</h5>
+                <p class="card-text">Identify high-risk conditions and improve road safety using insights.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-dark h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">User-Friendly Interface</h5>
+                <p class="card-text">Simple and responsive design accessible to all users.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="text-center">
+    <a href="/predict" class="btn btn-lg btn-success shadow-sm px-5">Start Prediction</a>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Prediction Result</h2>
+
+<div class="alert alert-info">
+    <strong>Predicted Accident Severity:</strong> {{ prediction }}
+</div>
+
+<h4>Input Details:</h4>
+<ul class="list-group">
+    {% for key, value in input_data.items() %}
+    <li class="list-group-item"><strong>{{ key.replace('_', ' ') }}:</strong> {{ value }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/predict" class="btn btn-primary mt-3">Try Again</a>
+<a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+{% endblock %}
